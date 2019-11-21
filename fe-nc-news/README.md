@@ -8,7 +8,7 @@ Northcoders News has articles which are divided into topics. Each article has us
 
 This review sprint should consolidate your understanding of making a [C.R.U.D](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) application from a front end perspective.
 
- _Note: You will come across a Cross-Origin-Resource-Sharing error once you start fetching data from your back-end API, which will need a slight update: [Express CORS Middleware](https://expressjs.com/en/resources/middleware/cors.html)_
+_Note: You will come across a Cross-Origin-Resource-Sharing error once you start fetching data from your back-end API, which will need a slight update: [Express CORS Middleware](https://expressjs.com/en/resources/middleware/cors.html)_
 
 ## Objectives
 

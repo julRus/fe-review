@@ -1,0 +1,472 @@
+.App {
+  text-align: center;
+}
+
+/* .App-header {
+  /* min-height: 100vh; */
+/* display: flex;
+  flex-direction: column; */
+/* align-items: center; */
+/* justify-content: center; 
+} */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: aliceblue;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(17, 156, 156, 0.6);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(18, 211, 211, 0.6);
+  /* display: none; */
+}
+
+body {
+  /* display: flex;
+  justify-content: center; */
+  color: #535353;
+  background: rgb(167, 196, 221);
+  font-family: "Roboto", sans-serif;
+}
+
+/* .logo {
+  display: inline-block;
+  position: fixed;
+  text-align: center;
+  color: white;
+  transform: scale(0.4);
+  top: -45%;
+  left: -207%;
+  padding: 0 1600px;
+  line-height: 1;
+  border: 1px dotted white;
+} */
+
+/* .nav {
+  /* border: 2px dotted wheat; 
+  max-width: 100%;
+}
+
+.nav_content {
+  max-width: 100%;
+  width: 100%;
+  position: fixed;
+  top: 10px;
+  z-index: 10;
+  border-bottom: 2px solid rgb(9, 125, 129);
+}
+
+.nav_link_home {
+  border-bottom: 1px solid greenyellow;
+}
+
+.nav_link_topics {
+  border-bottom: 1px solid rgb(219, 1, 1);
+}
+.nav_link_social {
+  border-bottom: 1px solid rgb(47, 241, 255);
+}
+.nav_link_like {
+  border-bottom: 1px solid rgb(255, 47, 151);
+}
+.nav_link_user {
+  border-bottom: 1px solid rgb(82, 255, 47);
+}
+
+#nav_link {
+  position: relative;
+  right: 180px;
+  display: inline-block;
+  /* display: none; 
+  text-decoration: none;
+  color: rgb(187, 187, 187);
+  margin-right: 2%;
+  margin-bottom: -1px;
+  width: auto;
+  max-width: 100%;
+  background: transparent;
+  font-size: 15px;
+  transition: 0.2s ease-in-out;
+  visibility: visible;
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.nav_link_log_in {
+  position: relative;
+  float: right;
+  border-bottom: 1px solid purple;
+}
+
+#nav_link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid greenyellow;
+
+  font-size: 24px;
+}
+
+#log_out_link {
+  position: relative;
+  float: right;
+} */
+
+body {
+  /* background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.42),
+      rgba(0, 0, 0, 0.73)
+    ),
+    url("https://i.ytimg.com/vi/wcTpTYQv7lg/maxresdefault.jpg");
+  background-repeat: no-repeat; */
+}
+
+.nav {
+  background-color: rgb(17, 156, 156, 0.6);
+  /* opacity: 0.6; */
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  top: -16px;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  transition: 0.2s ease-in-out;
+  visibility: visible;
+}
+
+#nav_link {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#nav_link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid greenyellow;
+  transition: 0.2s ease-in-out;
+
+  font-size: 24px;
+}
+#home {
+  display: none;
+}
+#topics {
+  display: none;
+}
+#social {
+  display: none;
+}
+#like {
+  display: none;
+}
+#user {
+  display: none;
+}
+
+.dropdown {
+  position: fixed;
+  display: inline-block;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  z-index: 20;
+  right: 0;
+  top: -20px;
+}
+
+.dropdown_title {
+  position: relative;
+  top: 10px;
+  left: 24px;
+}
+
+.dropdown > .dropdown_label {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  background-color: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: rgb(207, 207, 207);
+  text-decoration: none;
+  display: inline-block;
+  float: right;
+}
+
+.content {
+  max-width: 100%;
+}
+
+.articles_title {
+  color: #a1a1a1;
+  margin-top: 6%;
+  border-bottom: 1px solid rgb(17, 156, 156, 0.6);
+  float: left;
+  text-align: left;
+  width: 95%;
+}
+
+.article_card_container {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 50px;
+  width: 45%;
+  /* border: 1px solid pink; */
+  box-sizing: border-box;
+  margin: 1rem 0.25em;
+  border-radius: 0%;
+  /* float: left; */
+}
+
+.article_card_container:hover {
+  -webkit-box-shadow: -17px 28px 38px -14px rgba(75, 75, 75, 0.52);
+  -moz-box-shadow: -17px 28px 38px -14px rgba(88, 88, 88, 0.52);
+  box-shadow: -17px 28px 38px -14px rgba(71, 71, 71, 0.52);
+  transform: scale(1.008);
+  transition: 0.2s ease-in-out;
+}
+
+.article_link {
+  text-decoration: none;
+  list-style: none;
+  color: grey;
+  font-size: 12px;
+}
+
+.article_card {
+  color: #a1a1a1;
+  max-width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  /* border: 1px solid greenyellow; */
+  position: relative;
+  top: 50px;
+  right: 13%;
+  padding: 0 0;
+  width: 100%;
+  font-size: 8px;
+}
+
+.article_card_topic_tag {
+  display: inline;
+  padding: 5px;
+  color: #000000;
+  position: relative;
+  font-size: 10px;
+  font-weight: 900;
+  float: left;
+  background-color: rgb(255, 0, 0, 0.4);
+}
+
+.article_card_title {
+  color: rgb(206, 206, 206);
+  font-size: 20px;
+  display: inline-block;
+  text-align: left;
+  margin: 20px;
+  overflow: hidden;
+}
+
+.article_card_comment_tag {
+  position: relative;
+  font-size: 12px;
+  display: inline-block;
+  float: left;
+  margin: 15px;
+}
+
+.article_card_date_tag {
+  position: relative;
+  top: 87%;
+  background-color: rgb(255, 0, 0, 0.4);
+}
+
+[id="16"] {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(48, 61, 133, 0.52),
+      rgba(0, 0, 0, 0.73)
+    ),
+    url(https://upload.wikimedia.org/wikipedia/commons/0/03/FC_Barcelona_1910.jpg);
+  background-size: cover;
+}
+
+[id="28"] {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(48, 61, 133, 0.52),
+      rgba(0, 0, 0, 0.73)
+    ),
+    url(https://www.wildbackpacker.com/wp-content/uploads/strikingr/images/mountain_cooking-292x190.jpg);
+  background-size: cover;
+}
+
+[id="30"] {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(48, 61, 133, 0.52),
+      rgba(0, 0, 0, 0.73)
+    ),
+    url(https://www.sheknows.com/wp-content/uploads/2018/08/mc0y0iglo5kkwajcegna.jpeg?w=695&h=391&crop=1);
+  background-size: cover;
+}
+
+[id="13"] {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(48, 61, 133, 0.52),
+      rgba(0, 0, 0, 0.73)
+    ),
+    url(https://cdn.images.express.co.uk/img/dynamic/67/590x/910671_1.jpg);
+  background-size: cover;
+}
+
+[id="18"] {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(48, 61, 133, 0.52),
+      rgba(0, 0, 0, 0.73)
+    ),
+    url(https://i.ytimg.com/vi/-o7DMXt-3P8/maxresdefault.jpg);
+  background-size: cover;
+}
+
+[id="6"] {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(48, 61, 133, 0.52),
+      rgba(0, 0, 0, 0.73)
+    ),
+    url(https://cdn-media-1.freecodecamp.org/images/rMsi0io-O7iX5t5YqfljgTgYEC5mWTEJHXcz);
+  background-size: cover;
+}
+
+[id="4"] {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(48, 61, 133, 0.52),
+      rgba(0, 0, 0, 0.73)
+    ),
+    url(https://www.robinwieruch.de/static/2f8658dc8399e0cd334b8a76fe2b5dcd/2b1a3/banner.jpg);
+  background-size: cover;
+}
+
+[id="11"] {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(48, 61, 133, 0.52),
+      rgba(0, 0, 0, 0.73)
+    ),
+    url(https://miro.medium.com/max/3434/1*jfwTY39D9tuBlvc36jjrTA.png);
+  background-size: cover;
+}
+
+[id="31"] {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(48, 61, 133, 0.52),
+      rgba(0, 0, 0, 0.73)
+    ),
+    url(https://static01.nyt.com/images/2019/02/19/dining/kc-smoky-paella-copy/merlin_150673158_d668aacc-20a3-455b-8138-cadd0f8aba5c-articleLarge.jpg?quality=75&auto=webp&disable=upscale);
+  background-size: cover;
+}
+
+[id="33"] {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(48, 61, 133, 0.52),
+      rgba(0, 0, 0, 0.73)
+    ),
+    url(http://static1.squarespace.com/static/5c18cc70e17ba380e695f201/5c224cbd8a922d984e282099/5c601e0eeef1a13325d3242a/1563441106563/Dutch%2Bbrand%2BVivera%2Badds%2Bseafood-substitute%2BFish%2BBurger%2Bto%2Bits%2Brange%2B3.jpg?format=1500w);
+  background-size: cover;
+}
+
+[id="35"] {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(48, 61, 133, 0.52),
+      rgba(0, 0, 0, 0.73)
+    ),
+    url(https://cdn.crownmediadev.com/3f/ce/e38c2ff544eda9d24e594ead0ae3/home-family-dolly-partons-stone-soup.jpg);
+  background-size: cover;
+}
+
+[id="23"] {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(48, 61, 133, 0.52),
+      rgba(0, 0, 0, 0.73)
+    ),
+    url(https://i2-prod.chroniclelive.co.uk/incoming/article12797757.ece/ALTERNATES/s615/IFP_BEM_230314footy_10JPG.jpg);
+  background-size: cover;
+}
+
+[id="27"] {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(48, 61, 133, 0.52),
+      rgba(0, 0, 0, 0.73)
+    ),
+    url(https://hips.hearstapps.com/clv.h-cdn.co/assets/15/42/thanksgiving-drinks-5-1115.jpg);
+  background-size: cover;
+}
+
+[id="19"] {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(48, 61, 133, 0.52),
+      rgba(0, 0, 0, 0.73)
+    ),
+    url(https://i.imgur.com/VY8W8lm.png);
+  background-size: cover;
+}
+
+[id="3"] {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(48, 61, 133, 0.52),
+      rgba(0, 0, 0, 0.73)
+    ),
+    url(https://miro.medium.com/max/1200/1*y6C4nSvy2Woe0m7bWEn4BA.png);
+  background-size: cover;
+}
+
+[id="2"] {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(48, 61, 133, 0.52),
+      rgba(0, 0, 0, 0.73)
+    ),
+    url(https://www.theinquirer.net/w-images/be876f46-b4ec-46bb-a986-0d4f4d42c8b6/2/robot-580x358.jpg);
+  background-size: cover;
+}
+
+[id="12"] {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(48, 61, 133, 0.52),
+      rgba(0, 0, 0, 0.73)
+    ),
+    url(https://miro.medium.com/max/1023/1*d7fptjFMYTC9MZXDEUC38g.png);
+  background-size: cover;
+}
+
+[id="34"] {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(48, 61, 133, 0.52),
+      rgba(0, 0, 0, 0.73)
+    ),
+    url(https://pbs.twimg.com/media/C93HyVgXcAEGJor.jpg);
+  background-size: cover;
+}
