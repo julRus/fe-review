@@ -31,7 +31,7 @@ body {
   /* display: flex;
   justify-content: center; */
   color: #535353;
-  background: rgb(167, 196, 221);
+  background-color: rgb(0, 0, 0, 0.9);
   font-family: "Roboto", sans-serif;
 }
 
@@ -116,16 +116,6 @@ body {
   float: right;
 } */
 
-body {
-  /* background-image: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0.42),
-      rgba(0, 0, 0, 0.73)
-    ),
-    url("https://i.ytimg.com/vi/wcTpTYQv7lg/maxresdefault.jpg");
-  background-repeat: no-repeat; */
-}
-
 .nav {
   background-color: rgb(17, 156, 156, 0.6);
   /* opacity: 0.6; */
@@ -207,8 +197,8 @@ body {
 }
 
 .articles_title {
-  color: #a1a1a1;
-  margin-top: 6%;
+  color: #ccc;
+  margin-top: 0;
   border-bottom: 1px solid rgb(17, 156, 156, 0.6);
   float: left;
   text-align: left;
@@ -255,6 +245,7 @@ body {
   padding: 0 0;
   width: 100%;
   font-size: 8px;
+  /* border: 1px solid white; */
 }
 
 .article_card_topic_tag {
@@ -288,7 +279,65 @@ body {
 .article_card_date_tag {
   position: relative;
   top: 87%;
+  color: #000000;
+  text-align: left;
   background-color: rgb(255, 0, 0, 0.4);
+}
+
+.Topic {
+  margin-top: 46px;
+  display: inline-block;
+  padding: 15% 33%;
+  overflow: hidden;
+
+  border: 1px solid white;
+}
+
+.one {
+  position: relative;
+  display: inline;
+  top: 30px;
+  right: 350px;
+  padding: 230px 230px;
+  border: 1px solid pink;
+}
+
+.two {
+  position: relative;
+  display: inline;
+  right: 350px;
+  padding: 100px 100px;
+  top: -77px;
+  border: 1px solid pink;
+}
+.three {
+  position: relative;
+  display: inline;
+  right: 350px;
+  padding: 100px 100px;
+  top: -77px;
+
+  border: 1px solid pink;
+}
+
+.four {
+  position: relative;
+  display: inline;
+  right: 350px;
+  padding: 100px 100px;
+  top: 142px;
+  right: 786px;
+  border: 1px solid pink;
+}
+
+.five {
+  position: relative;
+  display: inline;
+  right: 350px;
+  padding: 100px 100px;
+  top: 122px;
+  right: 786px;
+  border: 1px solid pink;
 }
 
 [id="16"] {
@@ -469,4 +518,136 @@ body {
     ),
     url(https://pbs.twimg.com/media/C93HyVgXcAEGJor.jpg);
   background-size: cover;
+}
+
+.topics {
+  margin-top: 6%;
+  max-height: 20%;
+  max-width: 100%;
+}
+
+.topic_link {
+  list-style: none;
+  text-decoration: none;
+  color: #ccc;
+  max-height: 20%;
+  max-width: 100%;
+  text-transform: uppercase;
+  margin: 0 3px;
+}
+
+.topic_card {
+  display: inline-block;
+  height: 100%;
+  width: 20%;
+  padding: 80px 70px;
+  overflow: hidden;
+}
+
+.topic_card {
+  /* border: 1px solid white; */
+}
+
+.topic_tag {
+  background-color: rgb(0, 0, 0, 0.5);
+  /* border: 1px solid rgba(255, 0, 0, 0.4); */
+  position: relative;
+  top: 50px;
+  padding: 180px 0;
+}
+
+#coding {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.52),
+      rgba(71, 64, 64, 0.73)
+    ),
+    url(https://img.freepik.com/free-photo/programming-code-abstract-technology-background-software-developer-computer-script_34663-31.jpg?size=626&ext=jpg);
+  background-size: cover;
+}
+
+#football {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.52),
+      rgba(71, 64, 64, 0.73)
+    ),
+    url(https://i.pinimg.com/originals/fd/ed/8f/fded8fa3bd6aa4f67acc192a6f82edb9.jpg);
+  background-size: cover;
+}
+
+#cooking {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.52),
+      rgba(71, 64, 64, 0.73)
+    ),
+    url(https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/12/2018/03/food-photography-moments-of-drama.jpg);
+  background-size: cover;
+}
+
+#topic_slug {
+  margin: 0;
+  font-size: 250%;
+}
+
+#topic_dec {
+  margin: 0;
+  font-size: 50%;
+  background-color: rgb(255, 0, 0, 0.5);
+}
+
+@media only screen and (max-width: 450px) {
+  body {
+    background-color: rgb(0, 0, 0, 0.9);
+  }
+
+  /* #nav_link:active {
+    background-color: #000000;
+  } */
+
+  .articles_title {
+    margin-top: 15%;
+    color: #ccc;
+    width: 100%;
+  }
+
+  .article_card_container {
+    max-width: 100%;
+    position: relative;
+    padding: 50px;
+    width: 100%;
+    right: 7%;
+    box-sizing: border-box;
+    margin: 0.7rem 0.25em;
+    border-radius: 2%;
+    background-size: cover;
+  }
+
+  .article_card {
+    color: #a1a1a1;
+    max-width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    /* border: 1px solid greenyellow; */
+    position: relative;
+    top: 25px;
+    right: 0%;
+    padding: 0 0;
+    transform: scale(1.47, 1.2);
+    width: 100%;
+    font-size: 8px;
+    border-radius: 2%;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1100px) {
+  .article_card_container {
+    width: 55%;
+  }
+
+  .article_card {
+    top: 32px;
+    right: 0%;
+    transform: scale(1.335, 1.2);
+  }
 }

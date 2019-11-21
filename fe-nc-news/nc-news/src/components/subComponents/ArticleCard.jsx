@@ -12,7 +12,7 @@ const ArticleCard = props => {
             alt="article"
             className="article_card_img"
           /> */}
-            <p className="article_card_date_tag">{props.date}</p>
+            <p className="article_card_date_tag">. {props.date}</p>
             <p className="article_card_topic_tag">{props.topic}</p>
             <p className="article_card_comment_tag">
               {props.comments} comments
