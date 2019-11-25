@@ -249,9 +249,9 @@ body {
   /* border: 1px solid greenyellow; */
   position: relative;
   top: 50px;
-  right: 0%;
-  padding: 0 0;
-  width: 100%;
+  left: 4.8%;
+  padding: 60px 0;
+  width: 90.5%;
   font-size: 8px;
   transform: scale(1.26, 1);
   /* border: 1px solid white; */
@@ -526,7 +526,7 @@ body {
 }
 
 .topics {
-  margin-top: 6%;
+  margin-top: 4.5%;
   max-height: 20%;
   max-width: 100%;
 }
@@ -545,7 +545,7 @@ body {
   display: inline-block;
   height: 100%;
   width: 20%;
-  padding: 80px 70px;
+  padding: 230px 120px;
   overflow: hidden;
 }
 
@@ -597,6 +597,185 @@ body {
   font-size: 50%;
   background-color: rgb(255, 0, 0, 0.5);
 }
+
+.article_header {
+  z-index: 40;
+}
+
+/* .article_votes_button {
+  background-color: transparent;
+  position: relative;
+  display: inline-block;
+  display: flex;
+  left: 90%;
+  top: 34px;
+  border: none;
+  border-left: 1px dotted black;
+}
+
+.article_votes {
+  position: relative;
+  display: inline;
+  left: 42%;
+  top: -34px;
+  padding: 0 10% 0 0;
+  border-radius: 5px;
+}
+
+.article_date {
+  background-color: rgb(255, 0, 0, 0.4);
+  padding: 0 30%;
+  display: inline;
+  position: relative;
+  top: -20px;
+} */
+
+/* .article_author {
+  display: inline;
+  position: relative;
+  top: -34px;
+  right: 45%;
+  padding: 0 2% 0 5%;
+  background-color: rgb(255, 0, 0, 0.4);
+} */
+
+.article_header {
+  max-width: 100%;
+  display: inline-block;
+  width: 90%;
+  background-color: rgb(255, 0, 0, 0.4);
+  text-align: left;
+  margin: 0 5% 5% 5%;
+}
+
+.article_header p {
+  display: inline-block;
+  margin: 0 3%;
+}
+
+#voter {
+  position: relative;
+  float: right;
+  right: 6%;
+}
+
+.article_votes_button {
+  position: relative;
+  background-color: rgb(17, 156, 156, 0.8);
+  border: 0.5px solid rgb(255, 255, 255);
+  top: 18px;
+  float: right;
+  right: 5%;
+}
+
+.article_body {
+  max-width: 100%;
+  background-color: rgb(0, 0, 0, 0.5);
+  display: inline-block;
+  margin: 0 10%;
+  text-align: center;
+  font-size: 120%;
+  padding: 5%;
+  position: relative;
+  top: -80px;
+  z-index: -1;
+}
+
+.comments_title {
+  color: #ccc;
+  border-bottom: 1px solid rgb(17, 156, 156, 0.6);
+  float: left;
+  text-align: left;
+  position: relative;
+  left: 5%;
+  width: 90%;
+  /* text-transform: uppercase;
+  font-size: 120%; */
+}
+
+.post_comment_title {
+  color: #ccc;
+  border-bottom: 1px solid rgb(17, 156, 156, 0.6);
+  float: left;
+  text-align: left;
+  position: relative;
+  width: 100%;
+  /* top: -60px; */
+}
+
+.post_comment_box {
+  border: 1px solid rgb(17, 156, 156, 0.6);
+  background-color: transparent;
+  color: #ccc;
+}
+
+.post_comment_button {
+  background: transparent;
+  border: 1px solid rgb(17, 156, 156, 0.6);
+  color: #ccc;
+}
+
+.post_comment_button:hover {
+  background: rgb(17, 156, 156, 0.6);
+  border: 1px solid #ccc;
+  color: #ccc;
+}
+
+.comment_form {
+  margin-top: 5%;
+  display: inline-block;
+  float: right;
+  position: relative;
+  right: 7%;
+  top: -60px;
+
+  /* background: green; */
+}
+
+.comments {
+  max-width: 100%;
+  width: 60%;
+  /* border: 2px solid white; */
+  display: inline-block;
+  list-style: none;
+}
+
+.comment {
+  /* background: rgba(139, 255, 255, 0.4); */
+  border: 1px solid rgb(17, 156, 156, 0.6);
+  background-color: rgb(240, 248, 255, 0.8);
+  color: #000000;
+  width: 80%;
+  margin: 1% 0;
+}
+
+.comment_author {
+  color: black;
+  text-align: left;
+  float: left;
+  position: relative;
+  display: inline;
+  left: 2%;
+}
+
+.comment_votes {
+  display: inline;
+  float: right;
+}
+
+.comment_date {
+}
+
+/* .comment_header {
+  background: rgb(17, 156, 156);
+  float: left;
+  width: 100.2%;
+} */
+
+/* .comment_header p {
+  display: inline;
+  margin: 0 5%;
+} */
 
 @media only screen and (max-width: 450px) {
   body {

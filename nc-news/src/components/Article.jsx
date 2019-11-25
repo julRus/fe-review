@@ -43,14 +43,19 @@ export default class Article extends React.Component {
               />
             </div>
 
-            <p>{created_at}</p>
-            <p>{author}</p>
-            <p>{(votes + this.state.voteChangeArticle).toString()}</p>
-            <p>{body}</p>
+            <div className="article_header">
+              {" "}
+              <p className="article_author">{author}</p>
+              <p className="article_date">{created_at}</p>
+              <p className="article_votes" id="voter">
+                {(votes + this.state.voteChangeArticle).toString()}
+              </p>
+            </div>
+            <p className="article_body">{body}</p>
           </div>
+          <p className="comments_title">Comments</p>
           <div>
-            Comments
-            <section>
+            <section className="comment_form">
               <CommentMaker
                 user={this.props.user}
                 article_id={this.state.article.article_id}
@@ -58,7 +63,7 @@ export default class Article extends React.Component {
                 addComment={this.addComment}
               />
             </section>
-            <ul>
+            <ul className="comments">
               {comments.map(comment => {
                 return (
                   <div key={comment.comment_id}>

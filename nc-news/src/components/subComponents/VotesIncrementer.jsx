@@ -9,12 +9,14 @@ export default class VotesIncrementer extends React.Component {
   render() {
     return (
       <>
-        <button onClick={() => this.incrementVotes(this.props)}>
+        <button
+          onClick={() => this.incrementVotes(this.props)}
+          className="article_votes_button"
+        >
           <span role="img" aria-label="thumbsUp">
             {this.state.txt}
           </span>
         </button>
-        <p>VOTE</p>
       </>
     );
   }

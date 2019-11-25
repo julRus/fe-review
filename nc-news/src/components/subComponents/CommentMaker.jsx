@@ -15,18 +15,21 @@ export default class CommentMaker extends React.Component {
         </header> */}
         <main>
           <form onSubmit={event => this.createComment(event)}>
-            Post a Comment <br />
+            <p className="post_comment_title">Post a Comment</p>
+            <br />
             <label>
-              Comment Content
               <textarea
-                rows="9"
-                cols="50"
+                rows="20"
+                cols="20"
+                placeholder="Comment Content"
                 required
+                className="post_comment_box"
                 value={this.state.comment.body}
                 onChange={event => this.handleChange(event)}
               ></textarea>
-            </label>
-            <button>Submit</button>
+            </label>{" "}
+            <br />
+            <button className="post_comment_button">Submit</button>
           </form>
         </main>
       </>

@@ -4,11 +4,13 @@ const CommentCard = props => {
   const { date, author, body, votes } = props;
   return (
     <>
-      <li>
-        <p>{date}</p>
-        <p>{author}</p>
-        <p>{body}</p>
-        <p>{votes}</p>
+      <li className="comment">
+        <div className="comment_header">
+          <p className="comment_author">{author}</p>
+          <p className="comment_votes">{votes}</p>
+          <p className="comment_date">{date}</p>
+        </div>
+        <p className="comment_body">{body}</p>
       </li>
     </>
   );
