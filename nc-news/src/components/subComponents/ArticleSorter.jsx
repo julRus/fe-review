@@ -7,6 +7,14 @@ const ArticleSorter = props => {
   //   votes: false
   // };
 
+  const handleCheck = (target, fetchArticles) => {
+    // const checkboxes = target.name;
+    // checkboxes.forEach(box => {
+    //   if (box !== target) box.checked = false;
+    // });
+    fetchArticles(target.value, props.slug);
+  };
+
   return (
     <form className="dropdown">
       <p className="dropdown_title">SORT</p>
@@ -44,14 +52,6 @@ const ArticleSorter = props => {
       </label>
     </form>
   );
-};
-
-const handleCheck = (target, fetchArticles) => {
-  // const checkboxes = target.name;
-  // checkboxes.forEach(box => {
-  //   if (box !== target) box.checked = false;
-  // });
-  fetchArticles(target.value);
 };
 
 export default ArticleSorter;

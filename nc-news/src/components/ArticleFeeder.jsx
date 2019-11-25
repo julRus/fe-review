@@ -28,7 +28,10 @@ export default class ArticleFeeder extends React.Component {
     return (
       <section className="content">
         <div className="article_sorter">
-          <ArticleSorter fetchArticles={this.fetchArticles} />
+          <ArticleSorter
+            fetchArticles={this.fetchArticles}
+            slug={this.props.slug}
+          />
         </div>
         <div className="articles">
           <ul
@@ -37,7 +40,6 @@ export default class ArticleFeeder extends React.Component {
           >
             <h3 className="articles_title">ARTICLES</h3>
             {articles.map(article => {
-              console.log(article.article_id);
               return (
                 <ArticleCard
                   key={article.article_id}

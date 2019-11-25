@@ -6,7 +6,7 @@ export default class SignUp extends React.Component {
     return (
       <>
         <header>
-          <Header />
+          <Header user={this.props.user} />
         </header>
         <main>
           <form>

@@ -20,8 +20,8 @@ export default class Article extends React.Component {
   };
 
   render() {
-    // console.log(this.state.comments[0]);
-    if (this.state.isLoading) return <p>Loading...</p>;
+    if (this.state.isLoading)
+      return <p className="loadIndicator">Loading...</p>;
     if (this.state.err !== null) return <ErrorShower err={this.state.err} />;
     const { title, created_at, author, votes, body } = this.state.article;
     const { comments } = this.state;
@@ -31,10 +31,10 @@ export default class Article extends React.Component {
           {" "}
           <Header user={this.props.user} />
         </header>
-        <main>
+        <main className="article">
           <div>
             <div>
-              <h4>{title}</h4>
+              <h4 className="article_title">{title}</h4>
               <VotesIncrementer
                 articleVotes={this.state.article.votes}
                 id={this.state.article.article_id}
@@ -57,7 +57,6 @@ export default class Article extends React.Component {
                 comments={this.state.comments}
                 addComment={this.addComment}
               />
-              <Link to="/post_comment"> Post A Comment</Link>
             </section>
             <ul>
               {comments.map(comment => {
@@ -69,7 +68,7 @@ export default class Article extends React.Component {
                       author={comment.author}
                       body={comment.body}
                       date={comment.created_at}
-                      votes={comment.votes + this.state.voteChangeComment}
+                      votes={comment.votes}
                     />{" "}
                     <button
                       onClick={() =>
@@ -107,7 +106,11 @@ export default class Article extends React.Component {
       })
       .catch(err => {
         this.setState({
-          err: { status: err.response.status, msg: err.response.data.msg },
+          err: {
+            status: err.response.status,
+            msg: err.response.data.msg,
+            user: this.props.user
+          },
           isLoading: false
         });
       });
@@ -123,15 +126,31 @@ export default class Article extends React.Component {
         this.setState({
           err: {
             status: 400,
-            msg: `cannot get article of id ${id}, does not exist`
+            msg: `cannot get article of id ${id}, does not exist`,
+            user: this.props.user
           },
           isLoading: false
         });
       });
   }
 
-  handleVoteChange = (amnt, value) => {
-    this.setState({ [value]: amnt });
+  handleVoteChange = (id, amnt, value) => {
+    if (value === "voteChangeComment") {
+      this.setState(currentState => {
+        const newSate = {
+          ...currentState,
+          comments: [...currentState.comments]
+        };
+        newSate.comments.map(comment => {
+          if (id === comment.comment_id) {
+            comment.votes += amnt;
+          }
+        });
+        return newSate;
+      });
+    } else {
+      this.setState({ voteChangeArticle: amnt });
+    }
   };
 
   deletionChecker(author, id) {
@@ -142,18 +161,20 @@ export default class Article extends React.Component {
       );
       if (willDelete) {
         api.deleteComment(author, id);
-        this.deletedComment();
+        this.deletedComment(id);
       } else {
         alert("deletion cancelled");
       }
     }
   }
 
-  deletedComment() {
+  deletedComment(id) {
     this.setState(currentState => {
-      const newState = { ...this.sate, comments: this.state.comments };
-      newState.comments.shift();
-      return newState;
+      // const newState = { ...this.sate, comments: this.state.comments };
+      const newState = this.state.comments.filter(comment => {
+        return id !== comment.comment_id;
+      });
+      return { comments: newState };
     });
   }
 

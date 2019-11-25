@@ -1,12 +1,13 @@
 import React from "react";
 import Header from "./Header";
+import SignUp from "./SignUp";
 
 export default class LogIn extends React.Component {
   render() {
     return (
       <>
         <header>
-          <Header />
+          <Header user={this.props.user} />
         </header>
         <main>
           <form>
@@ -23,6 +24,7 @@ export default class LogIn extends React.Component {
             <br />
             <button>Log In</button>
           </form>
+          <SignUp user={this.props.user} />
         </main>
       </>
     );

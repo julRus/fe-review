@@ -28,8 +28,11 @@ class App extends React.Component {
             <LogIn path="/log_in" user={this.state.user} />
             <SignUp path="/sign_up" user={this.state.user} />
             <ErrorShower
-              err={{ status: 404, msg: "Route not found" }}
-              user={this.state.user}
+              err={{
+                status: 404,
+                msg: "Route not found",
+                user: this.state.user
+              }}
               default
             />
           </Router>

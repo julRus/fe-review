@@ -39,12 +39,12 @@ const Header = ({ user }) => {
                 <p id="social">Social</p>
               </i>
             </Link>
-            <Link to="/chnage_user" className="nav_link_like" id="nav_link">
+            <Link to="null" className="nav_link_like" id="nav_link">
               <i className="fa fa-heart" id="icon">
                 <p id="like">Like</p>
               </i>
             </Link>
-            <Link to="/chnage_user" className="nav_link_user" id="nav_link">
+            <Link to="/log_in" className="nav_link_user" id="nav_link">
               <i className="fa fa-sign-out" id="icon">
                 <p id="user">{user.username}</p>
               </i>

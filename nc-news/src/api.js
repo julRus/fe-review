@@ -2,11 +2,12 @@ import axios from "axios";
 
 const baseURL = "https://nc-news-julia.herokuapp.com/api";
 
-export const getArticles = (sort_term, topic) => {
-  const query = sort_term ? `?sort_by=${sort_term}` : ``;
+export const getArticles = (sort_term, topicName) => {
+  // const queryOne = topicName ? `?topic=${topicName}` : ``;
+  // const queryTwo = sort_term ? `?sort_by=${sort_term}` : ``;
   return axios
-    .get(`${baseURL}/articles?${query}`, {
-      params: { sort_by: sort_term, topic: topic }
+    .get(`${baseURL}/articles`, {
+      params: { topic: topicName, sort_by: sort_term }
     })
     .then(({ data }) => {
       return data.articles;

@@ -15,7 +15,7 @@ export default class CommentMaker extends React.Component {
         </header> */}
         <main>
           <form onSubmit={event => this.createComment(event)}>
-            Post an Comment <br />
+            Post a Comment <br />
             <label>
               Comment Content
               <textarea
