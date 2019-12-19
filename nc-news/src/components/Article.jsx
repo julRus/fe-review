@@ -5,7 +5,6 @@ import Header from "./Header";
 import CommentCard from "./subComponents/CommentCard";
 import VotesIncrementer from "./subComponents/VotesIncrementer";
 import ErrorShower from "../components/ErrorShower";
-import { Link } from "@reach/router";
 import CommentMaker from "./subComponents/CommentMaker";
 
 export default class Article extends React.Component {

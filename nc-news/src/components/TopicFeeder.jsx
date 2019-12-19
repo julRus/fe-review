@@ -22,7 +22,7 @@ export default class TopicFeeder extends React.Component {
                 to="/topic/articles"
                 state={{ slug: topic.slug, desc: topic.description }}
               >
-                <li className="topic_card" id={topic.slug}>
+                <li className="topic_card" id={topic.slug} key={topic.slug}>
                   <div className="topic_tag">
                     {" "}
                     <p id="topic_slug">{topic.slug}</p>
