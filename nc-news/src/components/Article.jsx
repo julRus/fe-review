@@ -75,6 +75,12 @@ export default class Article extends React.Component {
                       votes={comment.votes}
                     />{" "}
                     <button
+                      style={{
+                        display:
+                          comment.author === this.props.user.username
+                            ? "block"
+                            : "none"
+                      }}
                       onClick={() =>
                         this.deletionChecker(comment.author, comment.comment_id)
                       }

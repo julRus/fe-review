@@ -334,7 +334,6 @@ body {
   max-width: 100%;
   min-width: 100%;
   color: #ccc;
-  border: 1px solid white;
 }
 
 .article_title {
@@ -863,7 +862,6 @@ body {
   }
 
   .post_comment_box {
-    background: green;
     padding: 0 0 0 46%;
   }
 }
