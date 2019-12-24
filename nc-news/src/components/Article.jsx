@@ -66,6 +66,12 @@ export default class Article extends React.Component {
               {comments.map(comment => {
                 return (
                   <div key={comment.comment_id}>
+                    <VotesIncrementer
+                      commentVotes={comment.votes}
+                      commentId={comment.comment_id}
+                      displayVote={this.handleVoteChange}
+                      name="comments"
+                    />
                     <CommentCard
                       key={comment.comment_id}
                       id={comment.comment_id}
@@ -84,15 +90,10 @@ export default class Article extends React.Component {
                       onClick={() =>
                         this.deletionChecker(comment.author, comment.comment_id)
                       }
+                      className="comment_Delete_Button"
                     >
                       DELETE
                     </button>
-                    <VotesIncrementer
-                      commentVotes={comment.votes}
-                      commentId={comment.comment_id}
-                      displayVote={this.handleVoteChange}
-                      name="comments"
-                    />
                   </div>
                 );
               })}
@@ -151,6 +152,7 @@ export default class Article extends React.Component {
           ...currentState,
           comments: [...currentState.comments]
         };
+        // eslint-disable-next-line
         newSate.comments.map(comment => {
           if (id === comment.comment_id) {
             comment.votes += amnt;

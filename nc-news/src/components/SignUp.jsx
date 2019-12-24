@@ -10,11 +10,13 @@ export default class SignUp extends React.Component {
         </header>
         <main>
           <form>
-            SIGN UP <br />
+            Sign up <br />
             <label>
               Username
               <input type="text" />
             </label>
+            <br />
+            <button>Sign up</button>
           </form>
         </main>
       </>

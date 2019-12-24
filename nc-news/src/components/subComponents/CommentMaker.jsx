@@ -14,13 +14,16 @@ export default class CommentMaker extends React.Component {
           <Header user={this.props.user} />
         </header> */}
         <main>
-          <form onSubmit={event => this.createComment(event)}>
+          <form
+            onSubmit={event => this.createComment(event)}
+            className="post_comment"
+          >
             <p className="post_comment_title">Post a Comment</p>
             <br />
             <label>
               <textarea
-                rows="20"
-                cols="20"
+                rows="10"
+                cols="15"
                 placeholder="Comment Content"
                 required
                 className="post_comment_box"

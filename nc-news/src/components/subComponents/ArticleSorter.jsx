@@ -28,7 +28,6 @@ const ArticleSorter = props => {
           onChange={event => handleCheck(event.target, props.fetchArticles)}
         />
       </label>{" "}
-      <br />
       <label className="dropdown_label">
         Comments
         <input
@@ -39,7 +38,6 @@ const ArticleSorter = props => {
           onChange={event => handleCheck(event.target, props.fetchArticles)}
         />
       </label>
-      <br />
       <label className="dropdown_label">
         Votes
         <input
